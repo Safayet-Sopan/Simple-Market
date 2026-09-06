@@ -1,0 +1,27 @@
+.page-seller-approvals .data-table,
+.page-sales-overview .data-table,
+.page-commission-calculator .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.page-seller-approvals .data-table td {
+    white-space: normal;
+    min-width: 8rem;
+}
+
+.page-seller-approvals .data-table td.cell-actions {
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.page-seller-approvals .cell-actions .action-form + .action-form {
+    margin-left: var(--space-sm);
+}
+
+.page-commission-calculator .data-table tr:last-child td,
+.page-sales-overview .data-table tr:last-child td {
+    border-top: var(--rule);
+    font-weight: var(--weight-bold);
+}
