@@ -17,19 +17,37 @@ require_once __DIR__ . '/helpers/validation_helper.php';
 require_once __DIR__ . '/helpers/functions_helper.php';
 require_once __DIR__ . '/helpers/auth_helper.php';
 
-foreach ([
-    'notification_model', 'user_model', 'product_model', 'order_model',
-    'offer_model', 'review_model', 'message_model', 'earning_model',
-    'note_model', 'report_model',
-] as $model) {
-    require_once __DIR__ . '/models/' . $model . '.php';
+foreach (
+    [
+        'notification_model',
+        'user_model',
+        'product_model',
+        'order_model',
+        'offer_model',
+        'review_model',
+        'message_model',
+        'earning_model',
+        'note_model',
+        'report_model',
+    ] as $model
+) {
+    $path = __DIR__ . '/models/' . $model . '.php';
+    if (file_exists($path)) require_once $path;
 }
 
-foreach ([
-    'auth_controller', 'account_controller', 'admin_controller', 'seller_controller',
-    'customer_controller', 'rider_controller', 'ajax_controller',
-] as $controller) {
-    require_once __DIR__ . '/controllers/' . $controller . '.php';
+foreach (
+    [
+        'auth_controller',
+        'account_controller',
+        'admin_controller',
+        'seller_controller',
+        'customer_controller',
+        'rider_controller',
+        'ajax_controller',
+    ] as $controller
+) {
+    $path = __DIR__ . '/controllers/' . $controller . '.php';
+    if (file_exists($path)) require_once $path;
 }
 
 switch ($page) {
