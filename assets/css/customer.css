@@ -1,0 +1,37 @@
+/* SimpleMarket — customer.
+ *
+ * The turmeric accent is bound by `.role-customer` on <body> in style.css.
+ * What is left is the buying path: browse, checkout, tracking and feedback.
+ */
+
+/* Browse rows end in ORDER · OFFER. Both are actions, so both read as labels
+ * rather than as prose links. */
+.page-search .cell-actions a,
+.page-dashboard .cell-actions a {
+    font: var(--weight-bold) var(--size-label-caps) / var(--lh-label-caps) var(--font-sans);
+    letter-spacing: var(--track-label-caps);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.page-search .cell-actions a:hover {
+    text-decoration: underline;
+}
+
+/* Checkout: the running total is the figure the page is about. */
+.page-fast-delivery .order-total {
+    padding-top: var(--space-md);
+    border-top: var(--rule);
+    max-width: 34rem;
+}
+
+/* Tracking: the timeline leads, the item table follows. */
+.page-order-tracking .timeline {
+    margin-bottom: var(--space-xl);
+}
+
+/* Feedback and rating are two short forms; neither needs the full column. */
+.page-product-feedback .form-card,
+.page-seller-rating .form-card {
+    max-width: 420px;
+}

@@ -1,0 +1,32 @@
+/* SimpleMarket — rider.
+ *
+ * The indigo-vat accent is bound by `.role-rider` on <body> in style.css.
+ * What is left is dispatch: the claim queue, the run list and earnings.
+ */
+
+/* Vehicle and availability sit under the greeting as one meta line. */
+.page-dashboard p.meta {
+    margin-bottom: var(--space-xl);
+}
+
+/* CLAIM is the one action on an unclaimed run, so it gets the accent fill
+ * and nothing competes with it in the row. */
+.page-deliveries .cell-actions .btn {
+    min-width: 5rem;
+}
+
+/* An empty queue is labelled, not blank — the design is explicit about that. */
+.page-deliveries p:empty {
+    display: none;
+}
+
+/* Earnings ends in a total row: ruled off above, bold. */
+.page-earnings-calculator .data-table tr:last-child td {
+    border-top: var(--rule);
+    font-weight: var(--weight-bold);
+}
+
+/* Chat: the thread is a fixed reading height so the composer never moves. */
+.page-chat .chat-panel {
+    height: 420px;
+}
