@@ -3,7 +3,7 @@
 if (!defined('SITE_NAME')) {
 
     define('SITE_NAME', 'SimpleMarket');
-    define('BASE_URL', '/SimpleMarket/');
+    define('BASE_URL', '/' . trim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/');
 
     define('UPLOAD_PATH', 'uploads/');
 
